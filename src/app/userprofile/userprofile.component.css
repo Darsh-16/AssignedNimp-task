@@ -1,0 +1,12 @@
+.image-responsive{
+    height:310px; 
+    width:325px; 
+    background-size:cover;
+    /* border: 2px solid brown; */
+}
+
+.btn{
+    margin-top:20px; 
+    border-radius: 0%!important;
+    font-size: smaller;
+}

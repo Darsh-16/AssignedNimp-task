@@ -1,0 +1,58 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "firstName": "Messi",
+      "lastName": "Lionel",
+      "email": "fullaccess",
+      "pnumber": 346574576,
+      "age": 25,
+      "state": "Pune",
+      "country": "India",
+      "address": "54354fsdvfdgdf",
+      "tags": "g45t5grffdbgfdgf",
+      "newsletter": ""
+    },
+    {
+      "id": 3,
+      "firstName": "Messi",
+      "lastName": "Lionel",
+      "email": "fullaccess",
+      "pnumber": 346574576,
+      "age": 25,
+      "state": "Pune",
+      "country": "India",
+      "address": "54354fsdvfdgdf",
+      "tags": "g45t5grffdbgfdgf",
+      "newsletter": true
+    },
+    {
+      "id": 4,
+      "firstName": "DArsh",
+      "lastName": "Parajapati",
+      "email": "fullaccess",
+      "pnumber": 346574576,
+      "age": 34,
+      "state": "Pune",
+      "country": "India",
+      "address": "54354fsdvfdgdf",
+      "tags": "g45t5grffdbgfdgf",
+      "newsletter": true
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
