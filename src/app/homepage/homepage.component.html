@@ -90,10 +90,13 @@
           <form [formGroup]="formValue">
             <div class="row">
                 <div class="col-md-3 text-center" style="padding: 2px;">
-                        <img src="../../assets/pexels-pixabay-220453.jpg" alt="Profile Image" class="imgp">
+                        <!-- <img  formControlName="image"  src="../../assets/pexels-pixabay-2" alt="../../assets/female-icon-7893-Windows.ico" class="imgp">
+                <p style="font-size: 11px;text-align: center;color: rgb(33, 148, 241);margin-top: 10px;"><input type="file" #fileinput>upload your photo</p>
+                 -->
+                 <input #Image type="file" class="imgp" (change)="handleFileInput($event.target.files)" />
+                  <img *ngIf="imageUrl" [src]="imageUrl" class="image" />
                   
-                <p style="font-size: 11px;text-align: center;color: rgb(33, 148, 241);margin-top: 10px;">upload your photo</p>
-                </div>
+              </div>
                 <div class="col-md-9" >
                         <div class="row text-center" >
                           <div class="form-group col-md-7">

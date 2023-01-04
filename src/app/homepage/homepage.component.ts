@@ -17,6 +17,9 @@ export class HomepageComponent implements OnInit {
 
   formValue !:FormGroup;
   userModelObj:UserModel=new UserModel();
+  
+  fileToUpload: any;
+  imageUrl: any;
 
   constructor(config: NgbModalConfig, private modalService: NgbModal, private formbuilder:FormBuilder , private api:ApiService) { 
     config.backdrop = 'static';
@@ -35,7 +38,8 @@ export class HomepageComponent implements OnInit {
       country:[''],
       address:[''],
       tags:[''],
-      newsletter:['']
+      newsletter:[''],
+      image:[]
 
     })
 
@@ -64,6 +68,7 @@ export class HomepageComponent implements OnInit {
     this.userModelObj.address=this.formValue.value.address;
     this.userModelObj.tags=this.formValue.value.tags;
     this.userModelObj.newsletter=this.formValue.value.newsletter;
+    this.userModelObj.image=this.formValue.value.image;
 
     this.api.postuser(this.userModelObj)
     .subscribe((res)=> {
@@ -73,8 +78,19 @@ export class HomepageComponent implements OnInit {
     ()=>{
       alert("Something went Wrong");
     })
+}
 
 
+
+  handleFileInput(file: FileList) {
+    this.fileToUpload = file.item(0);
+
+    //Show image preview
+    let reader = new FileReader();
+    reader.onload = (event: any) => {
+      this.imageUrl = event.target.result;
+    }
+    reader.readAsDataURL(this.fileToUpload);
   }
 
 

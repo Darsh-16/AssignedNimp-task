@@ -10,5 +10,6 @@ export class UserModel{
       address:string='';
       tags:string='';
       newsletter:boolean=false;
+      image:string=''
 
 }
