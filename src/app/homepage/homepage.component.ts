@@ -18,8 +18,6 @@ export class HomepageComponent implements OnInit {
   formValue !:FormGroup;
   userModelObj:UserModel=new UserModel();
   
-  fileToUpload: any;
-  imageUrl: any;
 
   constructor(config: NgbModalConfig, private modalService: NgbModal, private formbuilder:FormBuilder , private api:ApiService) { 
     config.backdrop = 'static';
@@ -82,17 +80,28 @@ export class HomepageComponent implements OnInit {
 
 
 
-  handleFileInput(file: FileList) {
-    this.fileToUpload = file.item(0);
+  // fileToUpload: any;
+  imageUrl: any;
+  // handleFileInput(file) {
+  //   this.fileToUpload = file.item(0);
 
-    //Show image preview
-    let reader = new FileReader();
-    reader.onload = (event: any) => {
-      this.imageUrl = event.target.result;
-    }
-    reader.readAsDataURL(this.fileToUpload);
+  //   //Show image preview
+  //   let reader = new FileReader();
+  //   reader.onload = (event: any) => {
+  //     this.imageUrl = event.target.result;
+  //   }
+  //   reader.readAsDataURL(this.fileToUpload);
+  // }
+
+  handleFileInput(e:any){
+if(e.target.files){
+var reader = new FileReader();
+reader.readAsDataURL(e.target.files[0]);
+reader.onload=(event:any)=>{
+  this.imageUrl=event.target.result;
+}
+}
   }
-
 
 
 

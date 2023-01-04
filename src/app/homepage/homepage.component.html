@@ -93,8 +93,9 @@
                         <!-- <img  formControlName="image"  src="../../assets/pexels-pixabay-2" alt="../../assets/female-icon-7893-Windows.ico" class="imgp">
                 <p style="font-size: 11px;text-align: center;color: rgb(33, 148, 241);margin-top: 10px;"><input type="file" #fileinput>upload your photo</p>
                  -->
-                 <input #Image type="file" class="imgp" (change)="handleFileInput($event.target.files)" />
-                  <img *ngIf="imageUrl" [src]="imageUrl" class="image" />
+                 <img [src]="imageUrl" class="imgp" alt="Profile Image Here"/>
+                 <input #Image type="file" (change)="handleFileInput($event)" />
+            
                   
               </div>
                 <div class="col-md-9" >
