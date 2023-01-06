@@ -7,13 +7,25 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { Routes } from '@angular/router';
+import { NavigationComponent } from './navigation/navigation.component';
 
+
+const appRoutes:Routes=[
+  {
+    path:'home', component:HomepageComponent
+  },
+  {
+  
+  }
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    UserprofileComponent
+    UserprofileComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

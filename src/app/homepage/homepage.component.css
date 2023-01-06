@@ -137,3 +137,67 @@ a.nav-link{
     margin-right: 10px;
     border:1px solid lightgray;
 }
+
+.uploadimgbtn{
+    font-size: 11px;
+    text-align: center;
+    color: rgb(33, 148, 241);
+    margin-top: 10px;
+}
+
+
+/* .ngx-slider .ngx-slider-selection > span{ 
+     cursor: pointer;
+    width: 15px;
+    height: 15px;
+    top: -6px; 
+    background-color: red!important; 
+     z-index: 3;
+    border-radius: 50px;
+}  */
+
+/* 
+::ng-deep {
+    [.custom-ngx-slider] .ngx-slider .ngx-slider-bar] {
+      background: #ffe4d1;
+      height: 5px;
+    }
+    .custom-ngx-slider .ngx-slider .ngx-slider-selection {
+      background: red;
+    }
+  
+    .custom-ngx-slider .ngx-slider .ngx-slider-pointer {
+      width: 10px;
+      height: 15px;
+      top: auto; 
+      bottom: 0;
+      background-color: #22c70a;
+    }
+  
+    .custom-ngx-slider .ngx-slider .ngx-slider-pointer:after {
+      display: none;
+    }
+  
+    .custom-ngx-slider .ngx-slider .ngx-slider-bubble {
+      bottom: 14px;
+    }
+  
+    .custom-ngx-slider .ngx-slider .ngx-slider-limit {
+      font-weight: bold;
+      color: red;
+    }
+  
+    .custom-ngx-slider .ngx-slider .ngx-slider-tick {
+      width: 3px;
+      height: 15px;
+      margin-left: 4px;
+      border-radius: 0;
+      background: #ccc;
+      top: -1px;
+    }
+  
+    .custom-ngx-slider .ngx-slider .ngx-slider-tick.ngx-slider-selected {
+      background: rgb(0, 110, 255);
+    }
+  } */
+

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Options } from '@angular-slider/ngx-slider';
 import { FormBuilder , FormGroup } from '@angular/forms';
@@ -11,13 +11,14 @@ import { ApiService } from '../Shared/api.service';
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css'],
-  providers: [NgbModalConfig, NgbModal]
+  providers: [NgbModalConfig, NgbModal],
+  encapsulation: ViewEncapsulation.None
 })
 export class HomepageComponent implements OnInit {
 
   formValue !:FormGroup;
   userModelObj:UserModel=new UserModel();
-  
+
 
   constructor(config: NgbModalConfig, private modalService: NgbModal, private formbuilder:FormBuilder , private api:ApiService) { 
     config.backdrop = 'static';
@@ -37,7 +38,7 @@ export class HomepageComponent implements OnInit {
       address:[''],
       tags:[''],
       newsletter:[''],
-      image:[]
+      image:['']
 
     })
 
@@ -66,12 +67,14 @@ export class HomepageComponent implements OnInit {
     this.userModelObj.address=this.formValue.value.address;
     this.userModelObj.tags=this.formValue.value.tags;
     this.userModelObj.newsletter=this.formValue.value.newsletter;
-    this.userModelObj.image=this.formValue.value.image;
+    this.userModelObj.imageUrl=this.formValue.value.imageUrl;
 
     this.api.postuser(this.userModelObj)
     .subscribe((res)=> {
         console.log(res);
         alert("User Added SuccessFully.. ");
+        this.formValue.reset();
+        
     },
     ()=>{
       alert("Something went Wrong");
@@ -80,18 +83,8 @@ export class HomepageComponent implements OnInit {
 
 
 
-  // fileToUpload: any;
-  imageUrl: any;
-  // handleFileInput(file) {
-  //   this.fileToUpload = file.item(0);
 
-  //   //Show image preview
-  //   let reader = new FileReader();
-  //   reader.onload = (event: any) => {
-  //     this.imageUrl = event.target.result;
-  //   }
-  //   reader.readAsDataURL(this.fileToUpload);
-  // }
+  imageUrl: any="../../assets/Capture.JPG";
 
   handleFileInput(e:any){
 if(e.target.files){
@@ -102,6 +95,12 @@ reader.onload=(event:any)=>{
 }
 }
   }
+
+
+  clrform(){
+    this.formValue.reset();
+  }
+
 
 
 
