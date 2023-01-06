@@ -7,18 +7,14 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { NavigationComponent } from './navigation/navigation.component';
 
 
 const appRoutes:Routes=[
-  {
-    path:'home', component:HomepageComponent
-  },
-  {
-  
-  }
-]
+  {path:'', component:HomepageComponent},
+  {path:'user-profile' , component:UserprofileComponent}
+];
 
 @NgModule({
   declarations: [
@@ -32,7 +28,8 @@ const appRoutes:Routes=[
     NgbModule,
     NgxSliderModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
 
   ],
 

@@ -67,14 +67,16 @@ export class HomepageComponent implements OnInit {
     this.userModelObj.address=this.formValue.value.address;
     this.userModelObj.tags=this.formValue.value.tags;
     this.userModelObj.newsletter=this.formValue.value.newsletter;
-    this.userModelObj.imageUrl=this.formValue.value.imageUrl;
+    this.userModelObj.image=this.formValue.value.image;
 
     this.api.postuser(this.userModelObj)
     .subscribe((res)=> {
         console.log(res);
         alert("User Added SuccessFully.. ");
+        let ref = document.getElementById('cancel')
+        ref?.click();
         this.formValue.reset();
-        
+
     },
     ()=>{
       alert("Something went Wrong");
@@ -84,14 +86,14 @@ export class HomepageComponent implements OnInit {
 
 
 
-  imageUrl: any="../../assets/Capture.JPG";
+  image: any="../../assets/Capture.JPG";
 
   handleFileInput(e:any){
 if(e.target.files){
 var reader = new FileReader();
 reader.readAsDataURL(e.target.files[0]);
 reader.onload=(event:any)=>{
-  this.imageUrl=event.target.result;
+  this.image=event.target.result;
 }
 }
   }

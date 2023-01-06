@@ -1,4 +1,4 @@
-.body{
+/* .body{
     border: 1px solid transparent;
     background-image: url("../../assets/Capture_cleanup.JPG");
     height: 750px;
@@ -9,7 +9,7 @@
 
 .navigationbar{
     margin-top: 50px;
-    /* padding: 0px; */
+   
 }
 
 .navbar-brand{
@@ -25,7 +25,7 @@ a.nav-link{
 .home{
     border-top: 2px solid #55c5f9;
    
-}
+} */
 
 .txt1 h2{
     margin-top: 200px;
@@ -143,7 +143,13 @@ a.nav-link{
     text-align: center;
     color: rgb(33, 148, 241);
     margin-top: 10px;
+    
 }
+
+.btn:hover {
+    cursor: default;
+    text-decoration: none!important;
+    }
 
 
 /* .ngx-slider .ngx-slider-selection > span{ 
@@ -156,13 +162,9 @@ a.nav-link{
     border-radius: 50px;
 }  */
 
-/* 
-::ng-deep {
-    [.custom-ngx-slider] .ngx-slider .ngx-slider-bar] {
-      background: #ffe4d1;
-      height: 5px;
-    }
-    .custom-ngx-slider .ngx-slider .ngx-slider-selection {
+
+/* ::ng-deep {
+.custom-ngx-slider .ngx-slider .ngx-slider-selection {
       background: red;
     }
   
@@ -199,5 +201,25 @@ a.nav-link{
     .custom-ngx-slider .ngx-slider .ngx-slider-tick.ngx-slider-selected {
       background: rgb(0, 110, 255);
     }
-  } */
+  }  */
 
+
+  /* .slider1{
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    top: -4px;
+    background-color: darkgray;
+    z-index: 3;
+    border-radius: 16px;
+}
+ */
+ .ngx-slider .ngx-slider-pointer {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    top: -14px;
+    background-color: cyan;
+    z-index: 3;
+    border-radius: 16px;
+}

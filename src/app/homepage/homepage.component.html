@@ -1,6 +1,6 @@
 <div class="container-fluid body" >
  
-    <div class="container navigationbar">
+    <!-- <div class="container navigationbar">
       <nav class="navbar navbar-expand-md">
         <div class="container-fluid" >
           <a class="navbar-brand" href="#">DEMO APP</a>
@@ -31,7 +31,7 @@
           </div>
         </div>
       </nav>
-    </div>
+    </div> -->
 
 
 
@@ -93,9 +93,9 @@
           <form [formGroup]="formValue">
             <div class="row">
                 <div class="col-md-3 text-center" style="padding: 2px;">
-                 <img  [src]="imageUrl" class="imgp" alt="Profile Image Here" formControlName="imageUrl" />
+                 <img  [src]="image" class="imgp" alt="Profile Image Here" formControlName="image" />
                  <label class="button uploadimgbtn" for="upload">upload your photo</label>
-                 <input #Image type="file" (change)="handleFileInput($event)" style="display:none" id="upload" formControlName="imageUrl" />
+                 <input #Image type="file" (change)="handleFileInput($event)" style="display:none" id="upload" formControlName="image" />
               </div>
                 <div class="col-md-9" >
                         <div class="row text-center" >
@@ -118,8 +118,8 @@
                         <div class="form-group col-md-2">
                           <label for="inputAddress2" style="padding-top:20px ;color: #778087;">Age</label>
                         </div>
-                          <div class="form-group col-md-10">
-                            <ngx-slider [(value)]="value" [options]="options"   formControlName="age"></ngx-slider>
+                          <div class="form-group col-md-10 slider">
+                            <ngx-slider class=".ngx-slider .ngx-slider-pointer" [(value)]="value" [options]="options"   formControlName="age"></ngx-slider>
                         </div>
                       </div> 
                         <div class="form-group col-md-12">
@@ -150,8 +150,7 @@
                         <div>
                           
                           <button type="submit" class="btn submitbtn" (click)="postuserdetails()">Submit</button>
-                          <button type="submit" class="btn clearbtn" (click)="clrform()">Clear</button>
-                          
+                          <button type="reset" class="btn clearbtn" id="cancel" (click)="d('Cross click')">Cancel</button>
                         </div>
                       
                 </div>
